@@ -1,9 +1,16 @@
+apache-zookeeper-3.8.3-bin
+apache-zookeeper-3.8.3-bin.tar.gz
+/zk
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+nodes/
+*.log
+*.pid
 
 ### IntelliJ IDEA ###
+.idea
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
