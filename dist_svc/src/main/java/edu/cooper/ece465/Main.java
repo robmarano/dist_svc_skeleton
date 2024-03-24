@@ -4,6 +4,7 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import edu.cooper.ece465.zk.listeners.SpringAppEventsListener;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -30,7 +31,9 @@ public class Main {
     public static void main(String[] args) {
 //        SpringApplication.run(Application.class, args);
         SpringApplication application = new SpringApplication(Main.class);
+        application.addListeners(new SpringAppEventsListener());
         application.run(args);
+        System.out.println("Application started");
         System.out.println("Application pid file location = " + System.getProperty("user.dir") + "/" + PID_FILE_NAME + "." + new Main().pid + ".pid");
     }
 
